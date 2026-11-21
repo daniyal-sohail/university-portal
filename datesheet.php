@@ -6,7 +6,11 @@ page_start('Date Sheet', 'datesheet', $user);
 ?>
 <h1 class="h2 fw-bold mb-1">DateSheet</h1>
 <p class="text-secondary mb-4">Datesheet for upcoming <?= e(CURRENT_TERM) ?> exams</p>
-<?php if (!$rows): ?><div class="text-center text-secondary py-5">No exams scheduled yet.</div><?php endif; ?>
+<?php if (!$rows): ?>
+    <div class="text-center text-secondary py-5">
+        No exams scheduled yet.
+    </div>
+<?php endif; ?>
 <div class="row g-4">
 <?php foreach ($rows as $i => $r): ?>
     <div class="col-md-6 col-lg-4"><div class="ds-card p-4">
